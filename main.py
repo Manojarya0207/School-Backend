@@ -5,7 +5,7 @@ from passlib.context import CryptContext
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
 
-app = FastAPI()
+app = FastAPI(title="School Management API", version="1.0")
 
 
 @app.get("/")
