@@ -39,7 +39,7 @@ def create_access_token(data: dict):
     return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
 
-@app.post("/login")
+@app.post("admin/login")
 def login(user: LoginSchema):
     db_user = admins_collection.find_one({"email": user.email})
 
